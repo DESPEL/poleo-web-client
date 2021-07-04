@@ -23,4 +23,11 @@ const getUserData = () => {
   return data;
 }
 
-export { getUserData }
+const getSiteData = async () => {
+  return {
+    paid: "123,456.78",
+    answered: "51,126",
+  }
+}
+
+export { getUserData, getSiteData }

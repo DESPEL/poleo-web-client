@@ -1,0 +1,30 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: flex-end;
+}
+
+.title {
+  color: var(--secondary-font-color);
+  margin-bottom: var(--small-space);
+}
+
+.symbol {
+  font-size: var(--huge-font-sz)
+}
+
+.amount {
+  font-size: var(--huge-font-sz)
+}
+
+.currency {
+  font-size: var(--normal-font-sz);
+  font-weight: var(--regular-weight);
+  padding-bottom: calc(var(--huge-font-sz)/6);
+  color: var(--secondary-font-color);
+}

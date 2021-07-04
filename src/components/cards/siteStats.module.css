@@ -4,5 +4,22 @@
 }
 
 .content {
-  margin: var(--medium-space) var(--huge-space);
+  min-height: fit-content;
+  margin: var(--medium-space) var(--medium-space);
+  display: flex;
+  justify-content: center;
+  min-width: min-content;
+}
+
+.subcontent {
+  display: flex;
+  justify-content: center;
+  min-width: min-content;
+}
+
+.weird {
+  filter: invert(var(--colorInvert));
+  margin: var(--medium-space);
+  margin-top: -20px;
+  margin-bottom: -20px;
 }

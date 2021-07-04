@@ -11,12 +11,17 @@
   --input-background: #323232;
   --separator-color: #505050;
   --font-color: #FFFFFF;
+  --secondary-font-color: #969696;
   --accent-color: #12E57A;
 
   --normal-font-sz: 20px;
+  --huge-font-sz: 60px;
+
+  --divider-width: 1px;
 
   --normal-border-radius: 20px;
 
+  --small-space: 0.4em;
   --medium-space: 0.8em;
   --large-space: 1.6em;
   --huge-space: 4em;

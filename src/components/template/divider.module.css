@@ -1,0 +1,7 @@
+.divider {
+  display: flex;
+  min-height: 80%;
+  width: 0px;
+  border-left: var(--divider-width) solid var(--secondary-font-color);
+  margin: 0 var(--medium-space);
+}
