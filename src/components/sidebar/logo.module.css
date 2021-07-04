@@ -1,0 +1,15 @@
+.logo {
+  filter: invert(var(--colorInvert));
+  width: calc(319vw/1080 * 100);
+  min-width: 200px;
+  max-width: 319px;
+}
+
+.logoContainer {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

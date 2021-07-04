@@ -1,0 +1,23 @@
+.userCard {
+    display: flex;
+    align-items: center;
+}
+
+.profilePic {
+  height: 100%;
+}
+
+.picContainer{
+  height: 4em;
+  width: 4em;
+}
+
+.userInfo {
+  margin-left: var(--medium-space);
+}
+
+.profileLink {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 300;
+}

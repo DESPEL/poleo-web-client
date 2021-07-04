@@ -1,0 +1,18 @@
+.item {
+  font-size: var(--normal-font-sz);
+  background-color: var(--card-color-2);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  margin-left: var(--medium-space);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text-color);
+}

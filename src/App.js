@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { SideBar } from './components/sidebar'
+
+import { getUserData } from './helpers/user'
+import { useState } from 'react';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+import { Home } from './pages/home'
 
 function App() {
+  const [user, setUser] = useState(getUserData())
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <SideBar user={user} />
+        <Switch>
+          <Route path='/'>
+            <Home></Home>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
