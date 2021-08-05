@@ -31,7 +31,7 @@ export const SideBar = ({user, className}) => {
 
 export const MockSideBar = ({className}) => {
   return (
-      <div className={classNames(styles.root, className)}>
+      <div className={classNames(styles.root, className, styles.mock)}>
           <div className={styles.title}>
               <Logo></Logo>
           </div>

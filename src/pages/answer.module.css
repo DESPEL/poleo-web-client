@@ -1,0 +1,27 @@
+.content {
+  height: 100%;
+  padding: 0;
+  background-color: var(--container-background);
+  min-height: inherit;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--small-border-radius);
+}
+
+.availablePolls {
+  background-color: var(--container-background-light);
+  height: 100%;
+  flex-grow: 1;
+  max-width: 500px;
+}
+
+.currentPoll {
+  background-color: var(--container-background-dark);
+  height: 100%;
+  flex-grow: 3;
+}

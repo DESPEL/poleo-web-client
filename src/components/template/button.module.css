@@ -1,0 +1,13 @@
+.root {
+  background-color: var(--input-background);
+  width: fit-content;
+  border-radius: var(--small-border-radius);
+  padding: var(--small-space) var(--large-space);
+}
+
+
+.root:hover {
+  cursor: pointer;
+  transition-duration: var(--normal-transition);
+  transform: translateY(var(--normal-translation));
+}

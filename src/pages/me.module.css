@@ -1,0 +1,60 @@
+.root {
+  background-color: var(--container-background);
+}
+
+.gender {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.root {
+  margin: var(--xhuge-space);
+}
+
+.root > * {
+  margin: var(--large-space) var(--huge-space);
+}
+
+.pictureContainer {
+  margin: 0;
+  margin-top: calc(-1.5 * 4em - var(--medium-space));
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  /* margin-top: 0%; */
+}
+
+.picture {
+  /* transform: scale(3); */
+  height: calc(3 * 4em);
+  width: calc(3 * 4em);
+}
+
+.button {
+  transition-duration: var(--normal-transition);
+}
+
+.active {
+  background-color: var(--accent-color) !important;
+}
+
+.bottom {
+  margin-top: var(--huge-space);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom > * {
+  margin-top: var(--large-space);
+}
+
+.saveChanges {
+  font-size: var(--large-font-sz);
+}
+
+.changepw {
+  color: var(--accent-color)
+}

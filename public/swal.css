@@ -1,0 +1,146 @@
+.swal2-popup.swal2-toast {
+  background: var(--swal-bg-color) !important;
+}
+
+.swal2-popup.swal2-toast .swal2success {
+  border-color: var(--accent-color) !important;
+}
+
+.swal2-popup.swal2-toast .swal2-styled:focus {
+  box-shadow: 0 0 0 1px var(--input-background), 0 0 0 3px var(--accent-color-light) !important;
+}
+
+.swal2-popup {
+  background: var(--swal-bg-color) !important;
+  color: var(--font-color) !important;
+}
+
+.swal2-title {
+  color: var(--font-color) !important;
+}
+
+.swal2-loader {
+  border-color: var(--accent-color) transparent var(--accent-color) transparent !important;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: var(--accent-color) !important;
+  color: var(--font-color) !important;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: 0 0 0 3px var(--accent-color-light) !important;
+}
+
+.swal2-styled.swal2-deny {
+  background-color: var(--error-color) !important;
+  color: var(--font-color) !important;
+}
+
+.swal2-styled.swal2-cancel {
+  background-color: var(--input-background) !important;
+  color: var(--font-color) !important;
+}
+
+.swal2-styled.swal2-default-outline:focus {
+  box-shadow: 0 0 0 3px var(--input-background) !important;
+}
+
+.swal2-footer {
+  border-top: 1px solid var(--separator-color) !important;
+  color: var(--secondary-font-color) !important;
+}
+
+.swal2-close {
+  color: #ccc;
+}
+.swal2-close:hover {
+  color: #f27474;
+}
+.swal2-close:focus {
+  box-shadow: inset 0 0 0 3px rgba(100, 150, 200, 0.5);
+}
+
+.swal2-html-container {
+  color: var(--font-color);
+}
+
+.swal2-input,
+.swal2-file,
+.swal2-textarea {
+  border-radius: 0.1875em;
+  border: 1px solid var(--input-background) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent !important;
+}
+
+.swal2-input.swal2-inputerror,
+.swal2-file.swal2-inputerror,
+.swal2-textarea.swal2-inputerror {
+  border-color: #f27474 !important;
+  box-shadow: 0 0 2px #f27474 !important;
+}
+.swal2-input:focus,
+.swal2-file:focus,
+.swal2-textarea:focus {
+  border: 1px solid var(--input-background) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px var(--input-background-light) !important;
+}
+
+.swal2-input::-moz-placeholder, .swal2-file::-moz-placeholder, .swal2-textarea::-moz-placeholder {
+  color: #ccc !important;
+}
+.swal2-input:-ms-input-placeholder, .swal2-file:-ms-input-placeholder, .swal2-textarea:-ms-input-placeholder {
+  color: #ccc !important;
+}
+.swal2-input::placeholder,
+.swal2-file::placeholder,
+.swal2-textarea::placeholder {
+  color: #ccc !important;
+}
+
+.swal2-range {
+  background: var(--swal-bg-color) !important;
+}
+
+.swal2-radio,
+.swal2-checkbox {
+  background: var(--swal-bg-color) !important;
+}
+
+.swal2-validation-message {
+  background: var(--swal-bg-color) !important;
+  color: var(--secondary-font-color) !important;
+}
+
+.swal2-validation-message::before {
+  background-color: #f27474;
+  color: #fff;
+}
+
+.swal2-icon {
+  border-color: #000;
+}
+
+.swal2-progress-steps .swal2-progress-step {
+  background: var(--accent-color) !important;
+  color: var(--font-color) !important;
+}
+
+.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+  background: var(--accent-color) !important;
+}
+
+.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step {
+  background: var(--accent-color-light) !important;
+  color: var(--font-color) !important;
+}
+.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step-line {
+  background: var(--accent-color-light) !important;
+}
+.swal2-progress-steps .swal2-progress-step-line {
+  background: var(--accent-color) !important;
+}
+
+
+
+

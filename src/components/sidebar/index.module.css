@@ -39,3 +39,7 @@
 
     justify-content: flex-end;
 }
+
+.mock {
+  height: 50vh;
+}

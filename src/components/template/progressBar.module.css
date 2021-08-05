@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+
+  height: var(--small-progress-bar-height);
+
+  background-color: var(--input-background);
+
+  border-radius: var(--small-progress-bar-height);
+}
+
+.progress {
+  background-color: var(--accent-color);
+  border-radius: var(--small-progress-bar-height);
+  height: 100%;
+}

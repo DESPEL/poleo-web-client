@@ -1,0 +1,66 @@
+
+.active {
+  background-color: var(--container-background-light);
+}
+
+.root {
+  width: 100%;
+
+  border-radius: var(--small-border-radius);
+
+  display: flex;
+  align-items: center;
+
+  box-shadow: none;
+
+  padding: 0px;
+}
+
+.rootContent {
+  margin: var(--medium-space);
+  width: 100%;
+
+  border-radius: var(--small-border-radius);
+
+  display: flex;
+  align-items: center;
+
+  box-shadow: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.progress {
+  margin: 0 var(--medium-space);
+}
+
+.arrow {
+  transform: scale(var(--icon-scale));
+  color: var(--accent-color);
+
+}
+
+.title {
+  font-weight: var(--bold-weight);
+}
+
+.date {
+  font-weight: var(--regular-weight);
+  color: var(--secondary-font-color);
+}
+
+.answers {
+  font-size: var(--small-font-sz);
+  font-weight: var(--regular-weight);
+}
+
+.wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

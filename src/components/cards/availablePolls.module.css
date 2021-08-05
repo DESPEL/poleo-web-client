@@ -1,0 +1,27 @@
+.content {
+  height: 100%;
+
+  overflow: scroll;
+}
+
+.wrapper {
+  margin: var(--medium-space);
+}
+
+.title {
+  display: flex;
+  font-size: var(--large-font-sz);
+  font-weight: var(--bold-weight);
+  margin: var(--medium-space);
+}
+
+.polls {
+  width: 100%;
+}
+
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

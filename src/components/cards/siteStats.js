@@ -7,29 +7,28 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import { Card } from '../template/card'
 import { Balance } from '../template/balance'
 import { Divider } from '../template/divider'
-import { getSiteData, getUserData } from '../../helpers/user'
+import { getSiteData, getUserData } from '../../helpers/data'
+import { formatCurrency } from '../../helpers'
 
 const loadData = async (setStats, setBalance) => {
   const siteData = await getSiteData()
-  setStats(siteData)
-  const userData = await getUserData()
-  setBalance(userData.data.finance.balance)
+  setStats(siteData.header)
 }
 
 export const SiteStatsCard = () => {
   const [stats, setStats] = useState(false)
-  const [balance, setBalance] = useState(false)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    loadData(setStats, setBalance)
+    loadData(setStats)
   }, [])
 
   useEffect(() => {
-    if (stats !== false && balance !== false) {
+    if (stats !== false) {
       setLoading(false)
     }
-  }, [stats, balance, loading])
+    console.log(stats)
+  }, [stats, loading])
 
 
   return (
@@ -46,29 +45,20 @@ export const SiteStatsCard = () => {
             <Balance
               title="Tu balance actual"
               symbol="$"
-              amount={balance}
-              currency="MXN"
-            >
-            </Balance>
+              amount={formatCurrency(stats.balance.ammount)}
+              currency={stats.balance.currency}></Balance>
             <Divider></Divider>
             <Balance
               title="Saldo pagado a los usuarios este mes"
               symbol="$"
-              amount={stats.paid}
-              currency="MXN"
-            >
-            </Balance>
-            <Divider></Divider><Balance
+              amount={formatCurrency(stats.totalPaidToUsers.ammount)}
+              currency={stats.totalPaidToUsers.currency}></Balance>
+            <Divider></Divider>
+            <Balance
               title="Cantidad de respuestas este mes"
-              symbol=""
-              amount={stats.answered}
-              currency=""
-            >
-            </Balance>
+              amount={stats.pollsAnswered.toLocaleString()}></Balance>
           </div>
         }
-
-
       </div>
     </Card>
   )

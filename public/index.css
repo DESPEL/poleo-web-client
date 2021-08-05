@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --accent-color-rgb: 18, 229, 122;
+  --container-background-rgb: 23, 23, 23;
+
+  --background-color: #000000;
+  --container-background-dark: #121212;
+  --container-background: rgb(var(--container-background-rgb));
+  --container-background-transparent: rgb(var(--container-background-rgb), 0);
+  --container-background-light: #1C1C1C;
+  --input-background: #323232;
+  --separator-color: #505050;
+
+  --swal-bg-color: var(--container-background-light);
+  
+  --font-color: #FFFFFF;
+  --secondary-font-color: #969696;
+  --accent-color: rgb(var(--accent-color-rgb));
+  --error-color: #ea5455;
+
+  --accent-color-light: rgba(var(--accent-color-rgb), 0.5);
+  --input-background-light: #3232327F;
+
+  --accent-filter: invert(81%) sepia(52%) saturate(4963%) hue-rotate(99deg) brightness(106%) contrast(86%);
+
+  --tiny-font-sz: 10px;
+  --small-font-sz: 15px;
+  --normal-font-sz: 20px;
+  --xnormal-font-sz: 22px;
+  --large-font-sz: 28px;
+  --xlarge-font-sz: 40px;
+  --huge-font-sz: 60px;
+  --xhuge-font-sz: 70px;
+
+  --divider-width: 1px;
+
+  --small-border-radius: 10px;
+  --normal-border-radius: 20px;
+
+  --small-space: 0.4em;
+  --medium-space: 0.8em;
+  --large-space: 1.6em;
+  --huge-space: 4em;
+  --xhuge-space: 8em;
+
+  --small-progress-bar-height: 0.2em;
+
+  --normal-line-height: 1.5;
+  --small-line-height: 1;
+
+  --light-weight: 200;
+  --regular-weight: 300;
+  --medium-weight: 400;
+  --bold-weight: 500;
+
+  --colorInvert: 1;
+
+  --icon-scale: 1.3;
+
+  --graph-bar-color: rgba(var(--accent-color-rgb), 0.8);
+
+  color: var(--font-color);
+
+  /* Composed color variables */
+  --card-color-2: var(--container-background-light);
+
+/* Sidebar colors */
+  --sidebar-bg: var(--container-background);
+
+  --input-line-height: 2px;
+
+  --normal-transition: 300ms;
+
+  --normal-translation: -2px;
+
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+}
+
+.hidden {
+  display: visibility;
+  visibility: hidden;
+}
+
+.arrow {
+  color: var(--accent-color);
+  fill: var(--accent-color)
+}
+
+.noshow {
+  display: none;
+}

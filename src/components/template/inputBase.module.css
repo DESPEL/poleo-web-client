@@ -1,0 +1,9 @@
+.title {
+  font-size: var(--normal-font-sz);
+  color: var(--secondary-font-color);
+}
+
+.content {
+  font-size: var(--xnormal-font-sz);
+  font-weight: var(--regular-weight);
+}

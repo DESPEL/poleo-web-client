@@ -2,15 +2,20 @@
   display: flex;
   flex-direction: row;
 }
+
+.container {
+  width:100%;
+  height: calc(100vh - var(--huge-space) * 2);
+  margin: var(--huge-space);
+}
+
 .content {
   width: 100%;
   height: 100%;
-
-  margin: var(--huge-space);
 }
 
 .sideSpace {
   position:static;
-  display: hidden;
-  z-index: -99999;
+  top: 0;
+  left: 0;
 }

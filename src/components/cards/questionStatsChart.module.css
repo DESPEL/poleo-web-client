@@ -1,0 +1,9 @@
+.root {
+  background-color: var(--container-background-light);
+  border-radius: var(--small-border-radius);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}

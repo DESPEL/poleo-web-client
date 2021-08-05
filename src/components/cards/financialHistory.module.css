@@ -1,0 +1,32 @@
+.animation {
+  display: flex;
+  justify-content: center;
+}
+
+.root {
+  display: flex;
+  padding-bottom: var(--large-space);
+}
+
+.subtitle {
+  font-size: var(--medium-font-sz);
+  font-weight: var(--normal-font-weight);
+}
+
+.smallb {
+  transform: scale(0.8);
+}
+
+.balance {
+  width: 30%;
+}
+
+.fincanceGraph {
+  min-width: 100%;
+}
+
+.graph {
+  background-color: var(--container-background-light);
+  width: 40vw;
+  height: 100%;
+}

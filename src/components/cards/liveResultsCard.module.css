@@ -1,0 +1,20 @@
+.root {
+  background-color: var(--container-background);
+}
+
+.content {
+  /* margin: var(--medium-space); */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.spacer {
+  padding-top: var(--large-space);
+}
+
+.pollElement {
+  width: 100%;
+}

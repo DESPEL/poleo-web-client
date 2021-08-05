@@ -1,0 +1,16 @@
+.input {
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  border-bottom: var(--input-background) solid var(--input-line-height);
+  color: var(--text-color);
+
+  line-height: var(--normal-line-height);
+  font-size: var(--xnormal-font-sz);
+  font-weight: var(--regular-weight);
+}
+
+.input:focus {
+  outline: none;
+}

@@ -1,0 +1,24 @@
+.spacer {
+  padding-top: var(--huge-space);
+}
+
+.content {
+  display: flex;
+}
+
+.verticalSpacer {
+  padding-left: var(--huge-space);
+}
+
+.questions {
+  width: calc(4 * 100% / 7);
+}
+
+.liveResults {
+  width: calc(3 * 100% / 7);
+}
+
+.title {
+  font-size: var(--large-font-sz);
+  font-weight: var(--bold-weight);
+}

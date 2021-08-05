@@ -1,25 +1,41 @@
 import { SideBar } from './components/sidebar'
 
-import { getUserData } from './helpers/user'
-import { useState } from 'react';
+import { getUserData, getDefaultUser } from './helpers/data'
+import { useEffect, useState } from 'react';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { Home } from './pages/home'
+import { AnswerPage } from './pages/answer';
+import { HistoryPage } from './pages/history';
+import { MePage } from './pages/me';
 
 function App() {
-  const [user, setUser] = useState(getUserData())
+  const [user, setUser] = useState(getDefaultUser)
+
+  useEffect(() => {
+    (async () => {
+      setUser(await getUserData())
+    })()
+  }, [])
 
   return (
     <Router>
-      <div className="App">
-        <SideBar user={user} />
-        <Switch>
-          <Route path='/'>
-            <Home></Home>
-          </Route>
-        </Switch>
-      </div>
+      <SideBar user={user} />
+      <Switch>
+        <Route exact path='/'>
+          <Home></Home>
+        </Route>
+        <Route exact path='/answer'>
+          <AnswerPage></AnswerPage>
+        </Route>
+        <Route exact path='/history'>
+          <HistoryPage></HistoryPage>
+        </Route>
+        <Route exact path='/me'>
+          <MePage user={user} setUser={setUser}></MePage>
+        </Route>
+      </Switch>
     </Router>
   );
 }

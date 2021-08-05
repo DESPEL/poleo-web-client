@@ -2,15 +2,17 @@ import React from 'react'
 import styles from './userCard.module.css'
 
 import { Link } from 'react-router-dom'
+import { RoundPicture } from '../template/roundPicture'
 
 export const UserCard = ({user}) => {
-  const pfp = user.data.personalInfo.profilePhoto
-  const username = user.id // TODO: Get Username From User Object
   console.log(user)
+  const pfp = user.profilePhoto
+  const username = user.name
+
 	return (
 		<div className={styles.userCard}>
 			<div className={styles.picContainer}>
-				<img className={styles.profilePic} src={pfp} alt="err"/>
+        <RoundPicture src={pfp}></RoundPicture>
 			</div>
 			<div className={styles.userInfo}>
 				<div className={styles.userName}>

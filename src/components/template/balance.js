@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from './balance.module.css'
 
-export const Balance = ({title, symbol, amount, currency}) => {
+import classNames from 'classnames'
+
+export const Balance = ({title, symbol, amount, currency, className}) => {
   return (
-    <div className={styles.root}>
+    <div className={classNames(styles.root, className)}>
       <div className={styles.title}>
         {title}
       </div>

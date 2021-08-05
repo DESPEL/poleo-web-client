@@ -1,0 +1,6 @@
+
+.weird {
+  filter: invert(var(--colorInvert));
+  margin: var(--medium-space);
+  margin: -20px;
+}
