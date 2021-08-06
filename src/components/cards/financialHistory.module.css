@@ -6,6 +6,7 @@
 .root {
   display: flex;
   padding-bottom: var(--large-space);
+  width: 100%;
 }
 
 .subtitle {
@@ -18,15 +19,30 @@
 }
 
 .balance {
-  width: 30%;
+  flex-grow: 2;
 }
 
-.fincanceGraph {
-  min-width: 100%;
-}
-
-.graph {
+.financeGraph {
+  flex-grow: 1;
   background-color: var(--container-background-light);
-  width: 40vw;
-  height: 100%;
+  margin-right: calc(var(--large-space) + var(--large-space));
+}
+
+.active > * {
+  background-color: var(--accent-color);
+}
+
+.action {
+  border-radius: var(--small-border-radius);
+  box-shadow: none;
+}
+
+.ribbonContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-items: flex-end;
+}
+
+.sp {
+  flex-grow: 1;
 }

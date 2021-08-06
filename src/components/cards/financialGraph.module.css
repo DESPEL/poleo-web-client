@@ -1,0 +1,8 @@
+.graph {
+  background-color: var(--container-background-light);
+  width: 93%;
+
+  border-radius: var(--small-border-radius);
+  background-color: var(--container-background-light);
+  padding: var(--medium-space);
+}
