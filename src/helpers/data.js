@@ -647,10 +647,6 @@ export const getAvailablePolls = () => {
 }
 
 export const getFinancialRecord = () => {
-  console.log(buildReq(
-    withMethod('queryFinancialRecord'),
-    withCredentials
-  ))
   return apiCall(
     buildReq(
       withMethod('queryFinancialRecord'),

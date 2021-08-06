@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import { RoundPicture } from '../template/roundPicture'
 
 export const UserCard = ({user}) => {
-  console.log(user)
   const pfp = user.profilePhoto
   const username = user.name
 

@@ -19,10 +19,14 @@ export const HistoryPage = () => {
       <Card className={styles.root}>
         <div className={styles.content}>
           <div className={styles.top}>
-            <div className={styles.title}>
-              Historial Financiero
+            <div className={styles.financialTitle}>
+              <div className={styles.title}>
+                Historial Financiero
+              </div>
             </div>
-            <FinancialHistory></FinancialHistory>
+            <div className={styles.history}>
+              <FinancialHistory></FinancialHistory>
+            </div>
           </div>
           <div className={styles.bottom}>
             <div className={styles.answers}>

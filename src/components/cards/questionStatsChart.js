@@ -6,10 +6,7 @@ import { Bar } from 'react-chartjs-2'
 import classNames from 'classnames'
 import { uniqueId } from '../../helpers'
 
-
-const HIGHTLIGHT_COLOR = '#12E57A'
-
-export const QuestionStatsChart = ({ className, answers, title, showTitle }) => {
+export const QuestionStatsChart = ({ className, answers, title }) => {
   const options = {
     indexAxis: 'y',
     responsive: true,
@@ -38,7 +35,7 @@ export const QuestionStatsChart = ({ className, answers, title, showTitle }) => 
     ],
   };
 
-  const [id, _] = useState(uniqueId('qsc'))
+  const [id, ] = useState(uniqueId('qsc'))
 
   useEffect(() => {
     const element = document.getElementById(id)

@@ -1,8 +1,6 @@
 import { apiURL } from '../config'
-import {removeEmpty} from './'
 
 export const apiCall = async (data) => {
-  console.log(JSON.stringify(removeEmpty(data)))
   const response = await fetch(apiURL, {
     method: 'POST',
     headers: {

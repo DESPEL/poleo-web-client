@@ -19,7 +19,6 @@ export const LiveResultsCard = ({active, setActive,  dataLoader, tickPosition, c
     }
     loadPolls()
   }, [dataLoader])
-  useEffect(() => console.log(active), [active])
 
   const pollElements = polls.map(
     (v, i) => <div 

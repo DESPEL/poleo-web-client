@@ -77,7 +77,6 @@ export const showChangePassword = async (user) => {
       currentProgressStep: step,
       preConfirm: getPreConfirm(step)
     })
-    console.log(result)
 
     if (result.dismiss === Swal.DismissReason.backdrop)
       break
@@ -93,8 +92,6 @@ export const showChangePassword = async (user) => {
 
   if (step === steps.length) {
     const newPassword = values[2]
-    console.log('----------------')
-    console.log(newPassword)
     showRequestStatus(async () => await changePassword(newPassword), requestStatusMessages)
   }
 }

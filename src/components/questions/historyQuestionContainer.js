@@ -9,11 +9,10 @@ export const HistoryQuestionContainer = ({active, dataLoader}) => {
   useEffect(() => {
     const fetchPoll = async () => { 
       const polls = await dataLoader()
-      console.log(polls)
       setPoll(polls[active])
     }
     fetchPoll()
-  }, [active])
+  }, [active, dataLoader])
 
   const questions = poll.questions.map((v, i) => <HistoryQuestion poll={poll} question={v} key={i}></HistoryQuestion>)
 

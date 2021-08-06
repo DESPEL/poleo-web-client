@@ -34,7 +34,6 @@ const themeData = {
 
 export const changeTheme = (to) => {
   if (themeData[to] === undefined) {
-    console.log("uh oh theme error")
     return
   }
   const props = themeData[to]

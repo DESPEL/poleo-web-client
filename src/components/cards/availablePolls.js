@@ -14,7 +14,7 @@ export const AvailablePolls = ({active, setActive, setPollId}) => {
       setPollId(polls[0].id)
     }
     loadAvailablePolls()
-  }, [])
+  }, [setPollId])
 
   const pollsInfo = (polls instanceof Array ? polls : []).map((v, i) => <PollInfo poll={v} key={i} active={i===active} onClick={()=>{setActive(i); setPollId(v.id)}}></PollInfo>);
 

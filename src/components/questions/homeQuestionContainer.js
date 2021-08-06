@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styles from './homeQuestionContainer.module.css'
+// import styles from './homeQuestionContainer.module.css'
 
 import {getPolls} from '../../helpers/data'
 import { HomeQuestion } from '../cards/homeQuestion'
@@ -13,7 +13,7 @@ export const HomeQuestionContainer = ({active, dataLoader}) => {
       setPoll(polls[active])
     }
     fetchPoll()
-  }, [active])
+  }, [active, dataLoader])
 
   const questions = poll.questions.map((v, i) => <HomeQuestion poll={poll} question={v} key={i}></HomeQuestion>)
 

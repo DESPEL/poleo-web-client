@@ -12,7 +12,17 @@
 .top {
   background-color: var(--container-background);
   width: 100%;
+  max-width: 100%;
   padding: var(--large-space);
+}
+
+.history {
+  margin-top: var(--medium-space);
+  flex-grow: 4;
+}
+
+.financialTitle {
+  flex-grow: 1;
 }
 
 .bottom {

@@ -29,7 +29,6 @@ export const MePage = ({ user, setUser }) => {
 
   const updateInfo = async () => {
     await showRequestStatus(async () => await updateUserInfo(userCopy), messages)
-    console.log("udpated")
     setUser(userCopy)
   }
 

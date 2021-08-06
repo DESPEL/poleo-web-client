@@ -11,7 +11,6 @@ export const buildReq = (...handlers) => {
     const res = handlers[i]()
     composed = {...res, ...composed}
   }
-  console.log(composed)
   return composed
 }
 

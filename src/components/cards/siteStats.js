@@ -7,7 +7,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import { Card } from '../template/card'
 import { Balance } from '../template/balance'
 import { Divider } from '../template/divider'
-import { getSiteData, getUserData } from '../../helpers/data'
+import { getSiteData } from '../../helpers/data'
 import { formatCurrency } from '../../helpers'
 
 const loadData = async (setStats, setBalance) => {
@@ -27,7 +27,6 @@ export const SiteStatsCard = () => {
     if (stats !== false) {
       setLoading(false)
     }
-    console.log(stats)
   }, [stats, loading])
 
 
