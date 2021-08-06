@@ -82,7 +82,6 @@ const normalizeRecord = (rawRecordData, spanType) => {
     .map(({moment, value}) => [moment, normalizedRecords[1][normalizedRecords[1].length-1]])
     .reduce((prev, curr) => [[...prev[0], curr[0]], [...prev[1], curr[1]]], [[], []])
 
-  console.log(normalizedRecords)
   return {
     start: span.start,
     end: span.end,
@@ -107,7 +106,7 @@ export const FinancialGraph = ({type}) => {
     const loadData = async () => {
       const history = await getFinancialRecord()
       const record = normalizeRecord(history, spanTypes[type])
-      console.log(record)
+      
       setFinancialRecord(record)
     }
     loadData()
@@ -143,7 +142,7 @@ export const FinancialGraph = ({type}) => {
         label: " ",
         data: [...financialRecord.axisY, ...financialRecord.cAxisY],
         backgroundColor: 'rgba(155, 155, 155, 0.4)',
-        borderColor: 'rgba(155, 155, 155, 1)',
+        borderColor: 'rgba(155, 155, 155, 0.4)',
         fill: false,
         tension: 0.3,
         borderWidth: 3,
