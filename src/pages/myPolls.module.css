@@ -1,0 +1,39 @@
+.root {
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0;
+  background-color: var(--container-background-dark);
+  min-height: inherit;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--small-border-radius);
+}
+
+.mypolls {
+  width: 40%;
+  height: 100%;
+  background-color: var(--container-background);
+}
+
+.results {
+  flex-grow: 2;
+  height: 100%;
+  background-color: var*--container-background-light;
+}
+
+.content {
+  padding: var(--small-space);
+}
+
+.title {
+  font-size: var(--large-font-sz);
+  font-weight: var(--bold-weight);
+}

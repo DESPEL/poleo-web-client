@@ -9,6 +9,7 @@ import { Home } from './pages/home'
 import { AnswerPage } from './pages/answer';
 import { HistoryPage } from './pages/history';
 import { MePage } from './pages/me';
+import { MyPollsPage } from './pages/myPolls';
 
 function App() {
   const [user, setUser] = useState(getDefaultUser)
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route exact path='/me'>
           <MePage user={user} setUser={setUser}></MePage>
+        </Route>
+        <Route exact path='/mypolls'>
+          <MyPollsPage user={user}></MyPollsPage>
         </Route>
       </Switch>
     </Router>

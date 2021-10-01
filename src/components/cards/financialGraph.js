@@ -5,10 +5,12 @@ import { getFinancialRecord } from '../../helpers/data'
 import { Card } from '../template/card'
 import styles from './financialGraph.module.css'
 
+const TIMEZONE_OFFSET = (new Date).getTimezoneOffset() * 60 * 1000
+
 const year = (new Date()).getFullYear()
 const month = (new Date()).getMonth()
 const day = (new Date()).getDate()
-const dayOfTheWeek = (new Date()).getDate()
+const dayOfTheWeek = (new Date()).getDay()
 const currentTime = (new Date()).getTime()
 
 const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
@@ -22,7 +24,7 @@ const spanTypes = {
   },
   monthly: {
     length: () => (new Date(year, month, 0)).getDate(),
-    step: (i) => (new Date(year, month, i)).getTime(),
+    step: (i) => (new Date(year, month, i)).getTime()  - TIMEZONE_OFFSET,
     label: (moment) => (new Date(moment)).getDate(),
   },
   yearly: {
@@ -63,7 +65,7 @@ const normalizeRecord = (rawRecordData, spanType) => {
   const records = deltaToAbsolute(rawRecordData.record, rawRecordData.balance)
 
   let moment = 0
-  for (let i = 0, j = 0; moment < currentTime; i++) {
+  for (let i = 0, j = 0; i < data.length && moment < currentTime; i++) {
     moment = data[i].moment
     while (records[j].moment > data[i].moment) {
       if (j === records.length - 1)
