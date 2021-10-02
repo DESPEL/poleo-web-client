@@ -6,11 +6,13 @@ import { LiveResultsCard } from '../components/cards/liveResultsCard'
 import { sides } from '../helpers/enums'
 
 import classNames from 'classnames'
+import { RedirectNotLoggedIn } from '../components/helpers/redirectNotLoggedIn'
 
 export const MyPollsPage = ({ user }) => {
   const [active, setActive] = useState(0)
   return (
     <Template>
+      <RedirectNotLoggedIn></RedirectNotLoggedIn>
       <Card className={styles.root}>
         <div className={styles.wrapper}>
           <div className={classNames(styles.mypolls, styles.content)}>

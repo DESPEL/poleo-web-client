@@ -11,13 +11,14 @@ import { createInputHandler, createStateChangerBuilder } from '../helpers'
 import { updateUserInfo } from '../helpers/data'
 import { showRequestStatus } from '../components/swals/requestStatus'
 import { showChangePassword } from '../components/swals/changePassword'
+import { RedirectNotLoggedIn } from '../components/helpers/redirectNotLoggedIn'
 
 export const MePage = ({ user, setUser }) => {
   const [userCopy, setUserCopy] = useState(user)
 
   const buildStateChanger = createStateChangerBuilder(userCopy, setUserCopy)
 
-  const changeGender =  buildStateChanger('isMale')
+  const changeGender = buildStateChanger('isMale')
   const changeName = createInputHandler(buildStateChanger('name'))
   const changeEmail = createInputHandler(buildStateChanger('email'))
 
@@ -32,10 +33,11 @@ export const MePage = ({ user, setUser }) => {
     setUser(userCopy)
   }
 
-  useEffect(() => { setUserCopy(user)}, [user, setUserCopy])
+  useEffect(() => { setUserCopy(user) }, [user, setUserCopy])
 
   return (
     <Template>
+      <RedirectNotLoggedIn></RedirectNotLoggedIn>
       <div className={styles.container}>
         <Card className={styles.root}>
           <div className={styles.pictureContainer}>
@@ -47,18 +49,18 @@ export const MePage = ({ user, setUser }) => {
           </InputBase>
           <InputBase title="Sexo">
             <div className={styles.gender}>
-              <Button 
-                onClick={() => changeGender(false)} 
+              <Button
+                onClick={() => changeGender(false)}
                 className={classNames(styles.button, userCopy.isMale === false ? styles.active : "")}>
                 Femenino
               </Button>
-              <Button 
-                onClick={() => changeGender(true)} 
+              <Button
+                onClick={() => changeGender(true)}
                 className={classNames(styles.button, userCopy.isMale === true ? styles.active : "")}>
                 Masculino
               </Button>
-              <Button 
-                onClick={() => changeGender(null)} 
+              <Button
+                onClick={() => changeGender(null)}
                 className={classNames(styles.button, userCopy.isMale === null ? styles.active : "")}>
                 Indefinido
               </Button>
@@ -69,7 +71,7 @@ export const MePage = ({ user, setUser }) => {
             <div className={styles.changepw} onClick={() => showChangePassword(user)}>
               Cambiar contraseña
             </div>
-            <Button 
+            <Button
               className={classNames(styles.saveChanges, styles.active)}
               onClick={updateInfo}>Guardar Cambios</Button>
           </div>

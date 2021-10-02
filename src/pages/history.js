@@ -10,12 +10,14 @@ import { sides } from '../helpers/enums'
 import { getMyPolls } from '../helpers/data'
 
 import { HistoryQuestionContainer } from '../components/questions/historyQuestionContainer'
+import { RedirectNotLoggedIn } from '../components/helpers/redirectNotLoggedIn'
 
 export const HistoryPage = () => {
   const [active, setActive] = useState(0)
 
   return (
     <Template>
+      <RedirectNotLoggedIn></RedirectNotLoggedIn>
       <Card className={styles.root}>
         <div className={styles.content}>
           <div className={styles.top}>

@@ -3,6 +3,7 @@ import { buildReq, withCredentials, withDataToPost, withMethod } from './decorat
 
 const set = (key, value) => localStorage.setItem(key, value)
 
+
 export const getDefaultUser = () => {
   return {
     isDefault: true,

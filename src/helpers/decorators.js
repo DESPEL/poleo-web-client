@@ -1,13 +1,9 @@
+import { useHistory } from "react-router"
 import { getDefaultUser } from "./data"
 
 const get = (key) => localStorage.getItem(key)
 
 const LOGIN_REGISTER_PATH = '/login'
-
-const goToHome = () => {
-  window.location.href = LOGIN_REGISTER_PATH
-}
-
 export const buildReq = (...handlers) => {
   let composed = handlers[handlers.length - 1]()
   for (let i = handlers.length - 2; i >= 0; i--) {
@@ -17,11 +13,13 @@ export const buildReq = (...handlers) => {
   return composed
 }
 
+export const isLoggedIn = () => {
+  const [userId, password] = [get('userId'), get('password')]
+  return !(userId === null || password === null)
+}
+
 export const withCredentials = (handler = () => ({})) => {
   const [userId, password] = [get('userId'), get('password')]
-  if (window.location.href !== LOGIN_REGISTER_PATH && (userId === null || password === null)) {
-    goToHome()
-  } 
   if (userId === null || password === null) {
     return getDefaultUser()
   }
