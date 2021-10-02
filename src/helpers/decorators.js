@@ -1,9 +1,7 @@
-import { useHistory } from "react-router"
 import { getDefaultUser } from "./data"
 
 const get = (key) => localStorage.getItem(key)
 
-const LOGIN_REGISTER_PATH = '/login'
 export const buildReq = (...handlers) => {
   let composed = handlers[handlers.length - 1]()
   for (let i = handlers.length - 2; i >= 0; i--) {
