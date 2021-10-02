@@ -1,8 +1,11 @@
+import { getDefaultUser } from "./data"
 
 const get = (key) => localStorage.getItem(key)
 
+const LOGIN_REGISTER_PATH = '/login'
+
 const goToHome = () => {
-  window.location.href = '/'
+  window.location.href = LOGIN_REGISTER_PATH
 }
 
 export const buildReq = (...handlers) => {
@@ -16,8 +19,12 @@ export const buildReq = (...handlers) => {
 
 export const withCredentials = (handler = () => ({})) => {
   const [userId, password] = [get('userId'), get('password')]
-  if (userId === null || password === null)
+  if (window.location.href != LOGIN_REGISTER_PATH && (userId === null || password === null)) {
     goToHome()
+  } 
+  if (userId === null || password === null) {
+    return getDefaultUser()
+  }
   return {
     userId: userId,
     password: password,
