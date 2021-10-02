@@ -1,11 +1,9 @@
-import { type } from 'language-tags'
 import React, { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
 import { getFinancialRecord } from '../../helpers/data'
-import { Card } from '../template/card'
 import styles from './financialGraph.module.css'
 
-const TIMEZONE_OFFSET = (new Date).getTimezoneOffset() * 60 * 1000
+const TIMEZONE_OFFSET = (new Date()).getTimezoneOffset() * 60 * 1000
 
 const year = (new Date()).getFullYear()
 const month = (new Date()).getMonth()

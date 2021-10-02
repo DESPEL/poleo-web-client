@@ -19,7 +19,7 @@ export const buildReq = (...handlers) => {
 
 export const withCredentials = (handler = () => ({})) => {
   const [userId, password] = [get('userId'), get('password')]
-  if (window.location.href != LOGIN_REGISTER_PATH && (userId === null || password === null)) {
+  if (window.location.href !== LOGIN_REGISTER_PATH && (userId === null || password === null)) {
     goToHome()
   } 
   if (userId === null || password === null) {
